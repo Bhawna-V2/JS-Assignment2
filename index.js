@@ -16,7 +16,7 @@ function display() {
 }
 
 function getChangedValue() {  //  Can parse value by creating new function onchange on input
-    var inputVal = document.getElementById("inputVal").value   
+    var inputVal = document.getElementById("inputVal").value ;  
     intVal = parseInt(inputVal); // Parsing string value to integer
     console.log(intVal);
 }
