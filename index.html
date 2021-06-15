@@ -11,14 +11,15 @@
     <section class="cal-section">
         <div class="cal-detail">
             <h1>Calculation using Get and Set Method</h1>
-            <input type="text" placeholder="Enter Value..." id="inputVal" />
+            <input type="text" placeholder="Enter Value..." id="inputVal" onchange="getChangedValue()" />
 
             <div>
-                <button type="button" class="btn" onclick="addition()">Increment</button>
-                <button type="button" class="btn">Decrement</button>
-                <button type="button" class="btn">Addition</button>
-                <button type="button" class="btn">Multiplication</button>
+                <button type="button" class="btn" onclick="increment()">Increment</button>
+                <button type="button" class="btn" onclick="decrement()">Decrement</button>
+                <button type="button" class="btn" onclick="addition()">Addition</button>
+                <button type="button" class="btn" onclick="multiplication()">Multiplication</button>
             </div>
+            <div id="result"></div>
         </div>
     </section>
 

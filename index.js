@@ -1,56 +1,46 @@
-// function inputValue() {
-//     //alert("ok");
-//     var inputObj = {
-//         inputVal: document.getElementById("inputVal").value,
-//         // get addValue() {
-//         //   console.log(this.inputVal);
-//         // },
-      
-//         // set addValue(value) {
-//         //     this.inputVal = value;
-//         // }
-        
-//     };
-
-//     var data = inputObj.inputVal;
-//     data++;
-//     console.log(inputObj.inputVal);
-
-// }
-
-
 var inputVal = document.getElementById("inputVal").value;
-var intVal = parseInt(inputVal);
+var intVal;
 var val = 1;
 
+function getChangedValue() {
+    var inputVal = document.getElementById("inputVal").value
+    intVal = parseInt(inputVal); 
+    console.log(intVal);
+}
+
 var inputObj = {
-    userInput: inputVal,
-    get addValue() {
+    userInput: intVal,
+    get addValue() {        
         console.log(this.userInput);
     },
     set addValue(value) {
         this.userInput = value;
-    }
+    },
 }
-
-function addition() {
-    val += inputVal;
-    inputVal = val;
-    console.log(inputVal);
-}
-
-
-
-
-
-// function inputValue() {    
-//     var inputVal = document.getElementById("inputVal").value;
-//     for (var i=0; i<inputVal.length ; i++)
-//     { 
-//         inputVal[i]++;
-//         console.log(inputVal[i]);
-//     }
     
-// };
+//document.getElementById("userInput").innerHTML = inputObj.userInput;
+
+
+
+function increment() {
+    val = ++intVal;
+    intVal = val;
+    console.log(intVal); 
+}
+function decrement() {
+    val = --intVal;
+    intVal = val;
+    console.log(intVal); 
+}
+function addition() {
+    val += intVal;
+    intVal = val;
+    console.log(intVal); 
+}
+function multiplication() {
+    val *= intVal;
+    intVal = val;
+    console.log(intVal); 
+}
 
 
