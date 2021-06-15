@@ -18,7 +18,7 @@ var inputObj = {
     },
 }
     
-//document.getElementById("userInput").innerHTML = inputObj.userInput;
+document.getElementById("inputVal").innerHTML = inputObj.userInput;
 
 
 
