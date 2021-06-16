@@ -1,19 +1,9 @@
 var inputVal = document.getElementById("inputVal").value;
 var intVal;
-var val = 1;
+var val;
 
-var inputObj = {
-    userInput: intVal,
-    get addValue() {        
-        console.log(this.userInput);
-    },
-    set setValue(value) {
-        this.userInput = value;
-    },
-}
-function display() {
-    document.getElementById("inputVal").innerHTML = inputObj.userInput;
-}
+
+
 
 function getChangedValue() {  //  Can parse value by creating new function onchange on input
     var inputVal = document.getElementById("inputVal").value ;  
@@ -21,28 +11,64 @@ function getChangedValue() {  //  Can parse value by creating new function oncha
     console.log(intVal);
 }
 
+const inputObj = {
+    userInput: intVal,
+    get getValue() {        
+       return this.userInput;
+    },
+    set setValue(value) {
+        this.userInput = value;
+    },
+};
+
+// inputObj.setValue = this.userInput;
+
+function display() {
+    document.getElementById("inputVal").innerHTML = inputObj.setValue;
+}
+
 function increment() {
-    val = ++intVal;
-    intVal = val;
-    console.log(intVal); 
+    //alert("ok");
+    val = inputObj.getValue;
+    console.log(val);
+    //alert("ok1");
+    val = val++;
+    inputObj.setValue;
+
+
+    // val = ++intVal;
+    // intVal = val;
+    console.log(val); 
     display();
 }
 function decrement() {
-    val = --intVal;
-    intVal = val;
-    console.log(intVal); 
+    val = inputObj.getValue()
+    val = val--;
+    inputObj.setValue(val);
+
+    // val = --intVal;
+    // intVal = val;
+    // console.log(intVal); 
     display();
 }
 function addition() {
-    val += intVal;
-    intVal = val;
-    console.log(intVal); 
+    val = inputObj.getValue()
+    val += val;
+    inputObj.setValue(val);
+
+    // val += intVal;
+    // intVal = val;
+    // console.log(intVal); 
     display();
 }
 function multiplication() {
-    val *= intVal;
-    intVal = val;
-    console.log(intVal); 
+    val = inputObj.getValue()
+    val *= val;
+    inputObj.setValue(val);
+
+    // val *= intVal;
+    // intVal = val;
+    // console.log(intVal); 
     display();
 }
 
