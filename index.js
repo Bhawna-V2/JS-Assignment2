@@ -1,74 +1,50 @@
-var inputVal = document.getElementById("inputVal").value;
-var intVal;
-var val;
-
-
-
-
-function getChangedValue() {  //  Can parse value by creating new function onchange on input
-    var inputVal = document.getElementById("inputVal").value ;  
-    intVal = parseInt(inputVal); // Parsing string value to integer
-    console.log(intVal);
-}
-
 const inputObj = {
-    userInput: intVal,
+    userInput: 0,
     get getValue() {        
-       return this.userInput;
+       return this.userInput; 
     },
-    set setValue(value) {
+    set setValue(value) { // second - set value  // 7
         this.userInput = value;
     },
 };
 
-// inputObj.setValue = this.userInput;
-
-function display() {
-    document.getElementById("inputVal").innerHTML = inputObj.setValue;
+function getChangedValue() { // First   //  Can parse value by creating new function onchange on input
+    inputObj.setValue = +document.getElementById("inputVal").value ;  // 7 
 }
 
-function increment() {
-    //alert("ok");
-    val = inputObj.getValue;
-    console.log(val);
-    //alert("ok1");
-    val = val++;
-    inputObj.setValue = val;
+function display() {
+    document.getElementById("inputVal").value = inputObj.getValue;
+}
 
+function increment() { // Third - hit function
+    var incVal = inputObj.getValue; // get value set by setValue   7
+    incVal = ++incVal;  // 7+1
+    inputObj.setValue = incVal;
 
-    // val = ++intVal;
-    // intVal = val;
-    console.log(val); 
+    console.log(incVal);
     display();
 }
 function decrement() {
-    val = inputObj.getValue;
-    val = val--;
-    inputObj.setValue = val;
-
-    // val = --intVal;
-    // intVal = val;
-    // console.log(intVal); 
-    display();
+    var decVal = inputObj.getValue;
+    decVal = --decVal;
+    inputObj.setValue = decVal;
+    console.log(decVal);
+    display();    
 }
 function addition() {
-    val = inputObj.getValue;
-    val += val;
-    inputObj.setValue = val;
+    var addVal = inputObj.getValue;
+    addVal += addVal;
+    inputObj.setValue = addVal;
 
-    // val += intVal;
-    // intVal = val;
-    // console.log(intVal); 
+    console.log(addVal);
     display();
 }
 function multiplication() {
-    val = inputObj.getValue;
-    val *= val;
-    inputObj.setValue = val;
+    var mulVal = inputObj.getValue;
+    mulVal *= mulVal;
+    inputObj.setValue = mulVal;
 
-    // val *= intVal;
-    // intVal = val;
-    // console.log(intVal); 
+    console.log(mulVal);
     display();
 }
 
