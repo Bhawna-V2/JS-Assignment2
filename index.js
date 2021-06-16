@@ -33,7 +33,7 @@ function increment() {
     console.log(val);
     //alert("ok1");
     val = val++;
-    inputObj.setValue;
+    inputObj.setValue = val;
 
 
     // val = ++intVal;
@@ -42,9 +42,9 @@ function increment() {
     display();
 }
 function decrement() {
-    val = inputObj.getValue()
+    val = inputObj.getValue;
     val = val--;
-    inputObj.setValue(val);
+    inputObj.setValue = val;
 
     // val = --intVal;
     // intVal = val;
@@ -52,9 +52,9 @@ function decrement() {
     display();
 }
 function addition() {
-    val = inputObj.getValue()
+    val = inputObj.getValue;
     val += val;
-    inputObj.setValue(val);
+    inputObj.setValue = val;
 
     // val += intVal;
     // intVal = val;
@@ -62,9 +62,9 @@ function addition() {
     display();
 }
 function multiplication() {
-    val = inputObj.getValue()
+    val = inputObj.getValue;
     val *= val;
-    inputObj.setValue(val);
+    inputObj.setValue = val;
 
     // val *= intVal;
     // intVal = val;
